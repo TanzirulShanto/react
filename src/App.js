@@ -7,13 +7,14 @@ function App() {
   const [role, setRole] = useState('developer');
   const showEmployees = true;
   return (
-    <div className="App">
+    <div className="App bg-red-300">
         {showEmployees ? (
           <>
-            <input type="tetx" onChange={(e) => {
+            <input type="text" onChange={(e) => {
               console.log(e.target.value);
               setRole(e.target.value);
             }}/>
+            <br/>
 
             <Employee name="Jalal Udiin" role="Teacher and Researcher" />
             <Employee name="Tanzirul Islam" role={role}/>
